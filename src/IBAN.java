@@ -1,25 +1,53 @@
 import java.math.BigInteger;
 
+/**
+ * classe che implementa la verifica della correttezza di un IBAN
+ * @author Ida Chantal Vivacqua
+ * @version 1
+ */
+
 public class IBAN {
     
     private String iban;
 
+    /**
+     * costruttore dell'oggetto iban vuoto
+     */
     public IBAN(){
 
     }
+
+    /**
+     * construttore dell'oggeto iban con parametri
+     * @param i stringa che rappresenta l'IBAN
+     */
 
     public IBAN(String i){
         setIban(i);
     }
 
+    /**
+     * 
+     * @param iban istanzia l'oggetto IBAN
+     */
+
     public void setIban(String iban) {
         this.iban = iban;
     }
 
+    /**
+     * metodo che fornisce l'IBAN
+     * @return la stringa che rappresenta l'IBAN
+     */
     public String getIban() {
         return iban;
     }
 
+    /**
+     * metodo che verifica l'applicazione dello standard dei codici IBAN
+     * @return 1 sel'iban è conforme , 0 senon lo è
+     * @throws NullPointerException se la stringa dell'IBAN è vuota
+     */
     public boolean verificaIban(){
 
         // Verifica se l'iban è vuoto
